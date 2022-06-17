@@ -12,6 +12,17 @@ Build the backend using the following command.
 
 ```bash
 $ cd backend
-$ docker build -t python-demo:latest .
-$ docker run -d -p 5000:5000 --name python-demo-running python-demo
+$ docker build -t python-backend .
+$ docker run -d -p 5000:5000 --name python-backend-running python-backend
+```
+
+Below commands can be helpful in debugging
+
+```bash
+$ docker ps -a
+$ docker container exec -it python-backend-running /bin/bash
+$ docker logs python-backend-running
+$ docker stop python-backend-running
+$ docker start python-backend-running
+$ docker rm python-backend-running
 ```
